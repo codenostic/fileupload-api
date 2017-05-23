@@ -4,7 +4,7 @@ var app = express();
 
 route(app);
 
-app.listen(process.env.port || 8080, function(err){
+app.listen(process.env.PORT || 8080, function(err){
     if(err) throw err;
-    console.log('node server started on port'+process.env.port);
+    console.log('node server started on port'+process.env.PORT);
 });
