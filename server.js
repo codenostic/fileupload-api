@@ -16,6 +16,9 @@ app.get("/", (request, response) => {
   response.sendFile(__dirname + '/views/index.html')
 })
 
+app.post("/", (req, res) => {
+         
+})
 
 // listen for requests :)
 const listener = app.listen(process.env.PORT, () => {
