@@ -3,6 +3,8 @@
 
 // init project
 const express = require('express')
+var multer = require('multer')
+var upload = multer();
 const app = express()
 
 // we've started you off with Express, 
@@ -16,8 +18,8 @@ app.get("/", (request, response) => {
   response.sendFile(__dirname + '/views/index.html')
 })
 
-app.post("/", (req, res) => {
-         
+app.post("/", upload.single('file'), (req, res) => {
+         res.json({size: req.file.size})
 })
 
 // listen for requests :)
